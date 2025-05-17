@@ -62,4 +62,8 @@ public:
         cout<<"ID Staf :"<<IDstaf<<endl;
     }
     friend void LihatGajiStaf(staf* s)
+};
+
+void LihatGajiStaf(staf* s){
+    cout<<"Gaji Staf : "<<s->gaji<<endl;
 }
