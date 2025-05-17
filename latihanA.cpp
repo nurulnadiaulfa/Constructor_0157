@@ -40,5 +40,9 @@ public :
     }
     friend void LihatGajiDosen(dosen* d);
     friend class staf;
+};
+
+void LihatGajiDosen(dosen* d){
+    cout<<"Gaji Dosen :" <<d->gaji<<endl;
 }
 
