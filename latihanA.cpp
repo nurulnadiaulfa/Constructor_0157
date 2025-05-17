@@ -46,3 +46,20 @@ void LihatGajiDosen(dosen* d){
     cout<<"Gaji Dosen :" <<d->gaji<<endl;
 }
 
+class staf{
+private: 
+    string nama;
+    int IDstaf;
+    float gaji;
+public: 
+    staf(string nama, int IDstaf, float gaji) : nama(nama), IDstaf(IDstaf), gaji(gaji){}
+
+    void ubahPangkat(dosen* d, string pangkatBaru){
+        d->pangkat = pangkatBaru;
+    }
+    void tampilkanInfo(){
+        cout<<"Nama Staf : "<<nama<<endl;
+        cout<<"ID Staf :"<<IDstaf<<endl;
+    }
+    friend void LihatGajiStaf(staf* s)
+}
