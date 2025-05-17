@@ -61,9 +61,26 @@ public:
         cout<<"Nama Staf : "<<nama<<endl;
         cout<<"ID Staf :"<<IDstaf<<endl;
     }
-    friend void LihatGajiStaf(staf* s)
+    friend void LihatGajiStaf(staf* s);
 };
 
 void LihatGajiStaf(staf* s){
     cout<<"Gaji Staf : "<<s->gaji<<endl;
+}
+
+int main(){
+    mahasiswa mhs1("Adi", "123456");
+    dosen dsn("Budi", 5678, "Asisten Ahli", 10000000);
+    staf stf("Tia", 2, 200000);
+
+    dsn.beriNilai(&mhs1, 90);
+    mhs1.tampilkanInfo();
+    dsn.tampilkanInfo();
+    LihatGajiDosen(&dsn);
+    stf.ubahPangkat(&dsn, "Lektor");
+    dsn.tampilkanInfo();
+    stf.tampilkanInfo();
+    LihatGajiStaf(&stf);
+
+    return 0;
 }
