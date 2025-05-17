@@ -11,7 +11,7 @@ private :
     int nim;
     float nilai;
 public:
-    mahasiswa(string nama, string nim) : nama(nama), nim(nim), nilai(0){}
+    mahasiswa(string nama, int nim) : nama(nama), nim(nim), nilai(0){}
     
     void tampilkanInfo(){
         cout <<"Nama Mahasiswa : " <<nama <<endl;
@@ -69,7 +69,7 @@ void LihatGajiStaf(staf* s){
 }
 
 int main(){
-    mahasiswa mhs1("Adi", "123456");
+    mahasiswa mhs1("Adi", 23456);
     dosen dsn("Budi", 5678, "Asisten Ahli", 10000000);
     staf stf("Tia", 2, 200000);
 
